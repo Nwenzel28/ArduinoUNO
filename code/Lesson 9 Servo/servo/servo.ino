@@ -10,6 +10,8 @@ int pos = 0;    // variable to store the servo position
 void setup() {
   Serial.begin(9600);
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+
+  // Setup to test servo range. If the servo does not turn to this full range in the loop portion, increase the delay
   myservo.write(180);
   delay(3000);
   myservo.write(0);
