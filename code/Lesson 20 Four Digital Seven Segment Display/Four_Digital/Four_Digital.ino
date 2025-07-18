@@ -32,10 +32,10 @@ void Display(unsigned char num)
 void loop() {
 
   for (int i = 1; i <= 15; i++) {
-    Display(i); // Works
-    delay(500);
-    Display(i); // Not Working
-    delay(1300);
+    Display(i); // Turn Display on
+    delay(500); // Delay for this one can be as short as you like. 500ms was the previous program default
+    Display(i); // Turn Display off (Note: there is a bug where the 4-digit display only turns on every other call, this is to counter that)
+    delay(1300); // Must wait 1300 ms otherwise program does not work, as seen in the bug earlier.
   }
 
 }
